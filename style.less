@@ -1,0 +1,582 @@
+/*
+Theme Name: Diggle Material 1
+Theme URI: http://apps.diggle.tech/web/diggle-material-1
+Author: Diggle App Studios
+Author URI: http://apps.diggle.tech
+Description: Material Design theme for magazines
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: diggle-apps-material-blog-1
+Tags:
+
+@Author: Edmore M Gonese http://digolodollarz.co.zw
+
+Diggle Material 1 is for use on Diggle Tech blog.
+
+Diggle Material 1 is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+*/
+
+@fab-height: 56px;
+
+body {
+  background: rgba(0, 0, 0, 0.11);
+  color: black !important;
+  font-family: 'Droid Serif', serif;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inknut Antiqua', serif;
+  }
+
+  //main{
+  //  min-height: ~"calc(100vh - 164px)";
+  //  height:auto;
+  //}
+
+  p {
+    font-size: large;
+    line-height: 1.6;
+  }
+
+  img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+  }
+
+  //.mdl-cell {
+  //  margin: 0;
+  //}
+
+  .mdl-textfield {
+    width: 100%;
+  }
+
+  .search-submit {
+    right: 0;
+  }
+
+  .mdl-button--raised.mdl-button--colored {
+    color: white;
+  }
+}
+
+.mdl-layout__header {
+  .mdl-layout__header-row {
+    .mdl-button {
+
+    }
+
+    .mdl-navigation__link {
+      display: inline;
+      color: white;
+      line-height: initial;
+      padding: 0 24px;
+      opacity: 100;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  article {
+    p, h1, h2, h3, h4, h5, h6 {
+      //padding-left: 36px;
+      //padding-right: 24px;
+    }
+  }
+}
+
+.mdl-card {
+  width: initial;
+  margin-top: 16px;
+
+  .mdl-card__title {
+    color: #fff;
+    height: 233px;
+    padding: 0;
+
+    .dgl-overlay-card-title {
+      line-height: 1.5;
+      width: 100%;
+      padding: 24px 16px 8px;
+      background: rgba(0, 0, 0, 0.15);
+      background: linear-gradient(rgba(255, 0, 0, 0), rgba(0, 0, 0, 0.5));
+
+      a {
+        color: white;
+        text-decoration: none;
+        width: 100%;
+      }
+    }
+  }
+
+  .mdl-card__supporting-text {
+    color: black;
+    position: relative;
+  }
+
+  .mdl-card__menu {
+    color: white;
+  }
+
+  .mdl-button--icon {
+
+  }
+}
+
+div.dgl-card-small.mdl-card {
+  width: 250px;
+  height: 200px;
+
+  h4 {
+    color: #111;
+  }
+
+}
+
+.dgl-card {
+  min-height: 150px;
+  .mdl-card__supporting-text {
+    width: auto;
+
+    .date {
+      color: #FFF;
+      background: green;
+      position: absolute;
+      right: 5px;
+      bottom: 5px;
+      padding: 10px;
+      font-size: large;
+    }
+  }
+
+  .dgl-category {
+    //color: white;
+    //background: blue;
+    //padding: 5px 0;
+    display: inline-block;
+    //transform: skewX(-10deg);
+    //-o-transform: skewX(-10deg);
+    //-moz-transform: skewX(-10deg);
+    //-webkit-transform: skewX(-10deg);
+
+    text-decoration: none;
+    padding: 8px 0;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .dgl-button--read-more {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+  }
+}
+
+.dgl-card {
+  .dgl-card__title-text {
+    margin: 0;
+    padding: 24px 8px 16px;
+    color: white;
+  }
+
+}
+
+.recent-posts {
+  a {
+    text-decoration: none;
+    font-size: large;
+    padding: 2px 8px 2px;
+    color: black;
+  }
+}
+
+/*----------------------------
+Utility Classes
+------------------------------*/
+
+.if-room {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.dgl-fill-width {
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-flex;
+}
+
+/*-----
+Fab Toolbar like the one in Angular Material
+-----*/
+.dgl-fab-toolbar {
+  width: 100%;
+  height: @fab-height;
+  position: absolute;
+  top: 0;
+  width: 300px;
+  //background: lightblue;
+  left: 84px;
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+}
+
+.dgl-fab-toolbar:hover,
+.dgl-fab-toolbar--trigger:checked + .dgl-fab-toolbar {
+  display: block;
+}
+
+.dgl-share-icon {
+  margin-top: 10px;
+  width: 48px;
+  height: 48px;
+  i {
+    font-size: 36px;
+    line-height: normal;
+  }
+}
+
+/*-------------------
+Slide in / out CSS
+-------------------*/
+.slide-in {
+  animation: slide-in 0.5s forwards;
+  -webkit-animation: slide-in 0.5s forwards;
+}
+
+.slide-out {
+  animation: slide-out 0.5s forwards;
+  -webkit-animation: slide-out 0.5s forwards;
+}
+
+@keyframes slide-in {
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes slide-in {
+  100% {
+    -webkit-transform: translateX(0%);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes slide-out {
+  0% {
+    -webkit-transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+/*-------------------
+Slide in / out CSS
+-------------------*/
+
+/*----------------
+Center twitter tweet
+---------------*/
+.twitter-tweet.twitter-tweet-rendered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*--------------
+Remove link styles
+------------*/
+a.dgl-link--no-style {
+  text-decoration: none;
+}
+
+/*----------------------------
+Utility Classes
+------------------------------*/
+
+@dgl-related-card-height: 100px;
+
+.mdl-card.related-posts {
+  background: #2ab0ff;
+  a {
+    color: unset;
+    text-decoration-color: transparent;
+  }
+}
+
+.mdl-grid.mdl-grid--no-spacing {
+  .mdl-cell.mdl-cell--6-col.mdl-cell--4-col-tablet.mdl-cell--4-col-phone:nth-child(odd) {
+    padding-right: 4px;
+  }
+  .mdl-cell.mdl-cell--6-col.mdl-cell--4-col-tablet.mdl-cell--4-col-phone:nth-child(even) {
+    padding-left: 4px;
+  }
+}
+
+.mdl-card.dgl-related-card {
+  height: @dgl-related-card-height;
+  min-height: @dgl-related-card-height;
+  width: 100%;
+  white-space: nowrap;
+  display: inline-block;
+
+  > * {
+    display: inline-block;
+    white-space: initial;
+  }
+
+  .dgl-related-card--image {
+    width: @dgl-related-card-height;
+    height: @dgl-related-card-height;
+
+    img {
+      width: @dgl-related-card-height;
+      height: @dgl-related-card-height;
+      position: absolute;
+      top: 0;
+    }
+
+  }
+  .dgl-related-card--text {
+    width: ~"calc(100% - 100px)";
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 2px;
+
+    &.if-room {
+      overflow-y: visible;
+    }
+
+    .dgl-related-card--title {
+      position: absolute;
+      top: 0;
+      padding: 8px 0;
+      color: #00005c;
+
+      &:hover {
+        color: #008ccb;
+      }
+    }
+
+    .dgl-related-card--meta {
+      position: absolute;
+      bottom: 2px;
+    }
+  }
+}
+
+div {
+  .menu.menu-inline {
+    a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 8px 8px;
+      text-decoration: none;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    > li.menu-item {
+      color: white;
+      display: inline-block;
+      padding: 8px 0;
+
+      &.menu-item-has-children {
+        position: relative;
+        ul.sub-menu {
+          position: absolute;
+          //visibility: hidden;
+          display: none;
+          margin: 0;
+          padding: 0;
+
+          li.menu-item {
+            list-style-type: none;
+            overflow: hidden;
+            background-color: #333;
+          }
+        }
+        &.current-menu-ancestor,
+        &.current-menu-parent {
+          background: rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      &.menu-item-has-children:hover {
+        position: relative;
+        ul.sub-menu {
+          //position: absolute;
+          //visibility: hidden;
+          display: initial;
+          background: rgba(0, 0, 0, 0.2);
+          //top: 36px;
+          left: auto;
+          right: auto;
+
+          li.menu-item {
+          }
+        }
+      }
+    }
+  }
+}
+
+div {
+  .menu {
+    > li.menu-item {
+      &.menu-item-has-children {
+        ul.sub-menu {
+          li.menu-item {
+          }
+        }
+      }
+    }
+  }
+}
+
+a.latest-links {
+  padding: 8px;
+}
+
+a.latest-links:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.pagination-links {
+  //display: inline-block;
+  display: inline-flex;
+  width: 100%;
+  flex-flow: row wrap;
+
+  /* Then we define how is distributed the remaining space */
+  justify-content: center;
+  > * {
+    display: inline-block;
+    float: left;
+    margin: auto;
+
+    :first-child {
+      margin-left: 0;
+    }
+    :last-child {
+      margin-right: 0;
+    }
+  }
+
+  .pagination-link {
+    padding: 16px 0;
+    margin: auto;
+    a {
+      flex-grow: 1;
+      padding: 16px;
+      color: #008ccb;
+
+      &:hover {
+        background: lightblue;
+      }
+    }
+
+  }
+
+  .pagination-link.pagination-link--first,
+  .pagination-link.pagination-link--last {
+    color: white;
+    background: #008ccb;
+    a {
+      color: white;
+    }
+  }
+
+  .pagination-link.pagination-link--first {
+    margin-left: 0;
+  }
+
+  .pagination-link.pagination-link--last {
+    margin-right: 0;
+  }
+}
+
+@media screen {
+  @media (min-width: 840px) {
+    header.mdl-layout__header {
+      background: white;
+    }
+
+    .mdl-layout__header-row {
+      padding-left: 24px !important;
+    }
+
+    .mdl-layout__drawer,
+    .mdl-layout__drawer-button {
+      display: none;
+    }
+  }
+
+}
+
+.mdl-layout__header {
+  //background: rgb(9, 0, 0);
+}
+
+.content-grid {
+  max-width: 1200px;
+  padding: 8px 0 0;
+}
+
+.mdl-layout-title {
+  a {
+    font-size: larger;
+    font-weight: bold;
+  }
+}
+
+header.mdl-layout__header {
+  position: fixed;
+  color: #000;
+
+  div .menu.menu-inline li {
+    display: inline-block;
+    a {
+      display: inline-block;
+      color: black;
+      //font-style: italic;
+      font-weight: bolder;
+      font-size: larger;
+    }
+  }
+  a.mdl-navigation__link.site-title{
+    width: auto;
+    height: 100%;
+    color: black;
+    font-size: xx-large;
+    font-family: 'Inknut Antiqua',serif;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: -30px;
+  }
+}
+
+
+
+main {
+  margin-top: 40px;
+}
+

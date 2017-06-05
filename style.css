@@ -51,6 +51,9 @@ body .search-submit {
 body .mdl-button--raised.mdl-button--colored {
   color: white;
 }
+h4.side-title {
+  margin: 16px 8px;
+}
 .mdl-layout__header .mdl-layout__header-row .mdl-navigation__link {
   display: inline;
   color: white;
@@ -389,7 +392,7 @@ a.latest-links:hover {
   }
 }
 .content-grid {
-  max-width: 1200px;
+  max-width: 1600px;
   padding: 8px 0 0;
 }
 .mdl-layout-title a {

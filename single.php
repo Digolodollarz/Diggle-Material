@@ -5,9 +5,9 @@
  */
 
 get_header(); // This fxn gets the header.php file and renders it ?>
-<div id="primary" class="content-grid mdl-grid">
-    <div id="content" role="main" class="mdl-cell mdl-cell--8-col mdl-cell--2-offset-desktop">
-
+<div id="primary"
+     class="mdl-cell mdl-cell--8-col">
+    <div id="content" role="main">
         <?php if (have_posts()) :
             // Do we have any posts in the databse that match our query?
             ?>
@@ -16,7 +16,7 @@ get_header(); // This fxn gets the header.php file and renders it ?>
             // If we have a post to show, start a loop that will display it
             ?>
 
-            <article class="flex dgl-card mdl-card mdl-shadow--2dp">
+            <article class="dgl-card mdl-card mdl-shadow--4dp">
                 <div class="mdl-card__title"
                      style="background: url('<?php the_post_thumbnail_url(); ?>') center / cover;">
                     <h2 class="mdl-card__title-text dgl-overlay-card-title">
@@ -131,13 +131,17 @@ get_header(); // This fxn gets the header.php file and renders it ?>
         <?php endif; // OK, I think that takes care of both scenarios (having a post or not having a post to show) ?>
 
     </div><!-- #content .site-content -->
-<!--    -->
-<!--    <div id="sidebar" class="mdl-cell mdl-cell--4-col-desktop mdl-cell--8-col-tablet-->
-<!--     mdl-cell--order-2 mdl-cell--order-1-desktop">-->
-<!---->
-<!--    </div>-->
-    <?php get_sidebar(); ?>
+    <!--    -->
+    <!--    <div id="sidebar" class="mdl-cell mdl-cell--4-col-desktop mdl-cell--8-col-tablet-->
+    <!--     mdl-cell--order-2 mdl-cell--order-1-desktop">-->
+    <!---->
+    <!--    </div>-->
+    <!--    --><?php //get_sidebar(); ?>
 </div><!-- #primary .content-area -->
+<div id="sidebar"
+     class="mdl-cell mdl-cell--4-col">
+    <?php get_sidebar(); ?>
+</div>
 <div id="fb-root"></div>
 <script>(function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];

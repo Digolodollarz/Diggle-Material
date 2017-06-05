@@ -93,4 +93,4 @@
             <?php wp_nav_menu(); ?>
         </nav>
     </div>
-    <main class="main-fluid"><!-- start the page containter -->
+    <main class="main-fluid content-grid mdl-grid""><!-- start the page containter -->

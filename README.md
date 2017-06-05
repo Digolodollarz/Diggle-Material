@@ -1,4 +1,5 @@
-naked-wordpress
+Diggle Tech Material
 ===============
 
-A well-commented blank Wordpress theme.
+A Wordpress theme powered by Material Design Lite by Google.
+Based on the Naked Wordpress Theme

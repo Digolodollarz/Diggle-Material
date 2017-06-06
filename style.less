@@ -23,10 +23,18 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 
 @fab-height: 56px;
 
-body {
+html , body {
   background: rgba(0, 0, 0, 0.11);
   color: black !important;
   font-family: 'Droid Serif', serif;
+  font-weight: 400;
+  font-size: large;
+  line-height: 1.6;
+
+  ul, ol, p {
+    font-size: large;
+    line-height: 1.6;
+  }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Inknut Antiqua', serif;
@@ -37,10 +45,10 @@ body {
   //  height:auto;
   //}
 
-  p {
-    font-size: large;
-    line-height: 1.6;
-  }
+  //p {
+  //  font-size: large;
+  //  line-height: 1.6;
+  //}
 
   img {
     width: auto;
@@ -79,17 +87,8 @@ h4.side-title{
       display: inline;
       color: white;
       line-height: initial;
-      padding: 0 24px;
+      padding: 0;
       opacity: 100;
-    }
-  }
-}
-
-@media (min-width: 768px) {
-  article {
-    p, h1, h2, h3, h4, h5, h6 {
-      //padding-left: 36px;
-      //padding-right: 24px;
     }
   }
 }
@@ -332,15 +331,21 @@ Utility Classes
 }
 
 .mdl-card.dgl-related-card {
-  height: @dgl-related-card-height;
-  min-height: @dgl-related-card-height;
   width: 100%;
   white-space: nowrap;
   display: inline-block;
-
+  min-height: @dgl-related-card-height;
   > * {
+    //width: 100%;
+    //white-space: nowrap;
     display: inline-block;
-    white-space: initial;
+    height: @dgl-related-card-height;
+    min-height: @dgl-related-card-height;
+
+    > * {
+      display: inline-block;
+      white-space: initial;
+    }
   }
 
   .dgl-related-card--image {
@@ -518,6 +523,48 @@ a.latest-links:hover {
   }
 }
 
+#sidebar{
+  font-size: large;
+  line-height: 1.6;
+  aside{
+    &.dgl-card > * {
+      margin: 8px 8px 0;
+
+      &:first-child{
+        border-bottom: 1px solid #999999;
+      }
+    }
+
+
+    ul, ol{
+      list-style: none;
+      padding-left: initial;
+
+      a{
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen {
   @media (min-width: 840px) {
     header.mdl-layout__header {
@@ -532,9 +579,36 @@ a.latest-links:hover {
     .mdl-layout__drawer-button {
       display: none;
     }
+
+    main {
+      margin-top: 28px !important;
+    }
   }
 
 }
+
+@media screen {
+  @media (min-width: 1024px) {
+    header.mdl-layout__header {
+      background: white;
+    }
+
+    .mdl-layout__header-row {
+      padding-left: 24px !important;
+    }
+
+    .mdl-layout__drawer,
+    .mdl-layout__drawer-button {
+      display: none;
+    }
+
+    main {
+      margin-top: 36px !important;
+    }
+  }
+
+}
+
 
 .mdl-layout__header {
   //background: rgb(9, 0, 0);
@@ -560,27 +634,31 @@ header.mdl-layout__header {
     display: inline-block;
     a {
       display: inline-block;
-      color: black;
+
       //font-style: italic;
       font-weight: bolder;
       font-size: larger;
+
+      @media screen and (min-width: 840px) {
+        color: black;
+      }
     }
   }
   a.mdl-navigation__link.site-title{
     width: auto;
     height: 100%;
-    color: black;
     font-size: xx-large;
     font-family: 'Inknut Antiqua',serif;
     text-align: center;
     vertical-align: middle;
     margin-top: -30px;
+    @media screen and (min-width: 840px) {
+      color: black;
+    }
   }
 }
 
 
 
-main {
-  margin-top: 40px;
-}
+
 

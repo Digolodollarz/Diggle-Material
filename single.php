@@ -6,7 +6,7 @@
 
 get_header(); // This fxn gets the header.php file and renders it ?>
 <div id="primary"
-     class="mdl-cell mdl-cell--8-col">
+     class="mdl-cell mdl-cell--8-col mdl-cell--5-col-tablet">
     <div id="content" role="main">
         <?php if (have_posts()) :
             // Do we have any posts in the databse that match our query?
@@ -58,36 +58,36 @@ get_header(); // This fxn gets the header.php file and renders it ?>
             </div>
 
 
-            <div class="related-posts mdl-grid mdl-grid--no-spacing">
-                <?php
-                //for use in the loop, list 5 post titles related to first tag on current post
-                $tags = wp_get_post_tags($post->ID);
-                if ($tags) {
-                    $first_tag = $tags[0]->term_id;
-                    $theseTags = array();
-                    foreach ($tags as $key => $value)
-                        $theseTags[$key] = $value->term_id;
-                    $args = array(
-                        'tag__in' => $theseTags,// array($first_tag),
-                        'post__not_in' => array($post->ID),
-                        'posts_per_page' => 4,
-                        'ignore_sticky_posts' => 1
-                    );
-                    $my_query = new WP_Query($args);
-                    if ($my_query->have_posts()) {
-                        while ($my_query->have_posts()) : $my_query->the_post(); ?>
-                            <!--                            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--4-col-phone">-->
-                            <!--                                <div class="mdl-card mdl-card--2dp related-posts">-->
-                            <!--                                    <a href="--><?php //the_permalink() ?><!--" rel="bookmark"-->
-                            <!--                                       title="Permanent Link to --><?php //the_title_attribute(); ?><!--">-->
-                            <!--                                        <div class="mdl-card__title">-->
-                            <!--                                            <h4>--><?php //the_title(); ?><!--</h4>-->
-                            <!--                                        </div>-->
-                            <!--                                    </a>-->
-                            <!--                                </div>-->
-                            <!--                            </div>-->
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
-                                <div class="mdl-card dgl-related-card">
+            <div class="related-posts ">
+                <div class="mdl-card mdl-shadow--2dp dgl-related-card mdl-grid mdl-grid--no-spacing">
+                    <?php
+                    //for use in the loop, list 5 post titles related to first tag on current post
+                    $tags = wp_get_post_tags($post->ID);
+                    if ($tags) {
+                        $first_tag = $tags[0]->term_id;
+                        $theseTags = array();
+                        foreach ($tags as $key => $value)
+                            $theseTags[$key] = $value->term_id;
+                        $args = array(
+                            'tag__in' => $theseTags,// array($first_tag),
+                            'post__not_in' => array($post->ID),
+                            'posts_per_page' => 2,
+                            'ignore_sticky_posts' => 1
+                        );
+                        $my_query = new WP_Query($args);
+                        if ($my_query->have_posts()) {
+                            while ($my_query->have_posts()) : $my_query->the_post(); ?>
+                                <!--                            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--4-col-phone">-->
+                                <!--                                <div class="mdl-card mdl-card--2dp related-posts">-->
+                                <!--                                    <a href="--><?php //the_permalink() ?><!--" rel="bookmark"-->
+                                <!--                                       title="Permanent Link to --><?php //the_title_attribute(); ?><!--">-->
+                                <!--                                        <div class="mdl-card__title">-->
+                                <!--                                            <h4>--><?php //the_title(); ?><!--</h4>-->
+                                <!--                                        </div>-->
+                                <!--                                    </a>-->
+                                <!--                                </div>-->
+                                <!--                            </div>-->
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
                                     <a class="dgl-link--no-style" href="<?php the_permalink() ?>">
                                         <div class="dgl-related-card--image">
                                             <?php the_post_thumbnail('thumbnail'); ?>
@@ -102,15 +102,14 @@ get_header(); // This fxn gets the header.php file and renders it ?>
                                         </div>
                                     </a>
                                 </div>
-                            </div>
-                            <?php
-                        endwhile;
+                                <?php
+                            endwhile;
+                        }
+                        wp_reset_query();
                     }
-                    wp_reset_query();
-                }
-                ?>
+                    ?>
+                </div>
             </div>
-
         <?php endwhile; // OK, let's stop the post loop once we've displayed it
             ?>
 
@@ -139,7 +138,7 @@ get_header(); // This fxn gets the header.php file and renders it ?>
     <!--    --><?php //get_sidebar(); ?>
 </div><!-- #primary .content-area -->
 <div id="sidebar"
-     class="mdl-cell mdl-cell--4-col">
+     class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
     <?php get_sidebar(); ?>
 </div>
 <div id="fb-root"></div>

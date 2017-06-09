@@ -22,11 +22,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 */
 
 @fab-height: 56px;
+@card-horizontal-padding: 64px;
 
-html , body {
+html, body {
   background: rgba(0, 0, 0, 0.11);
   color: black !important;
-  font-family: 'Droid Serif', serif;
+  font-family: 'Vollkorn', serif;
   font-weight: 400;
   font-size: large;
   line-height: 1.6;
@@ -37,7 +38,7 @@ html , body {
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Inknut Antiqua', serif;
+    font-family: 'Sorts Mill Goudy', serif;
   }
 
   //main{
@@ -71,9 +72,19 @@ html , body {
   .mdl-button--raised.mdl-button--colored {
     color: white;
   }
+
+  blockquote {
+    font-family: "Vollkorn", serif;
+    position: relative;
+    font-size: 24px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.35;
+    letter-spacing: .08em;
+  }
 }
 
-h4.side-title{
+h4.side-title {
   margin: 16px 8px;
 }
 
@@ -523,47 +534,28 @@ a.latest-links:hover {
   }
 }
 
-#sidebar{
+#sidebar {
   font-size: large;
   line-height: 1.6;
-  aside{
+  aside {
     &.dgl-card > * {
       margin: 8px 8px 0;
 
-      &:first-child{
+      &:first-child {
         border-bottom: 1px solid #999999;
       }
     }
 
-
-    ul, ol{
+    ul, ol {
       list-style: none;
       padding-left: initial;
 
-      a{
+      a {
         text-decoration: none;
       }
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media screen {
   @media (min-width: 840px) {
@@ -583,6 +575,18 @@ a.latest-links:hover {
     main {
       margin-top: 28px !important;
     }
+
+    article.dgl-card.mdl-card {
+      .mdl-card__supporting-text {
+        padding: 16px 32px 16px;
+      }
+    }
+
+    #content > article > div.mdl-card__title > h2 {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+
   }
 
 }
@@ -605,10 +609,20 @@ a.latest-links:hover {
     main {
       margin-top: 36px !important;
     }
+
+    article.dgl-card.mdl-card {
+      .mdl-card__supporting-text {
+        padding: 16px 64px 32px;
+      }
+    }
+
+    #content > article > div.mdl-card__title > h2 {
+      padding-left: 64px;
+      padding-right: 64px;
+    }
   }
 
 }
-
 
 .mdl-layout__header {
   //background: rgb(9, 0, 0);
@@ -644,14 +658,14 @@ header.mdl-layout__header {
       }
     }
   }
-  a.mdl-navigation__link.site-title{
+  a.mdl-navigation__link.site-title {
     width: auto;
     height: 100%;
     font-size: xx-large;
-    font-family: 'Inknut Antiqua',serif;
+    font-family: 'Vollkorn', serif;
     text-align: center;
     vertical-align: middle;
-    margin-top: -30px;
+    margin-top: 16px;
     @media screen and (min-width: 840px) {
       color: black;
     }

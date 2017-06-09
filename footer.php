@@ -1,12 +1,14 @@
 <?php
-	/*-----------------------------------------------------------------------------------*/
-	/* This template will be called by all other template files to finish 
-	/* rendering the page and display the footer area/content
-	/*-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+/* This template will be called by all other template files to finish
+/* rendering the page and display the footer area/content
+/*-----------------------------------------------------------------------------------*/
 ?>
 
 </main><!-- / end page container, begun in the header -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<!--<link href="https://fonts.googleapis.com/css?family=Droid+Serif|Inknut+Antiqua" rel="stylesheet">-->
+<link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy|Vollkorn" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <footer class="mdl-mini-footer site-footer">
     <div class="mdl-mini-footer__left-section">
         <div class="mdl-logo">Digolodollarz Technology News</div>
@@ -16,7 +18,7 @@
     </div>
 </footer>
 
-<?php wp_footer(); 
+<?php wp_footer();
 // This fxn allows plugins to insert themselves/scripts/css/files (right here) into the footer of your website. 
 // Removing this fxn call will disable all kinds of plugins. 
 // Move it if you like, but keep it around.

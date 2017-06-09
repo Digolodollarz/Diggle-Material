@@ -24,7 +24,7 @@ html,
 body {
   background: rgba(0, 0, 0, 0.11);
   color: black !important;
-  font-family: 'Droid Serif', serif;
+  font-family: 'Vollkorn', serif;
   font-weight: 400;
   font-size: large;
   line-height: 1.6;
@@ -50,7 +50,7 @@ html h5,
 body h5,
 html h6,
 body h6 {
-  font-family: 'Inknut Antiqua', serif;
+  font-family: 'Sorts Mill Goudy', serif;
 }
 html img,
 body img {
@@ -69,6 +69,16 @@ body .search-submit {
 html .mdl-button--raised.mdl-button--colored,
 body .mdl-button--raised.mdl-button--colored {
   color: white;
+}
+html blockquote,
+body blockquote {
+  font-family: "Vollkorn", serif;
+  position: relative;
+  font-size: 24px;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.35;
+  letter-spacing: .08em;
 }
 h4.side-title {
   margin: 16px 8px;
@@ -435,6 +445,13 @@ a.latest-links:hover {
   main {
     margin-top: 28px !important;
   }
+  article.dgl-card.mdl-card .mdl-card__supporting-text {
+    padding: 16px 32px 16px;
+  }
+  #content > article > div.mdl-card__title > h2 {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
 @media screen and (min-width: 1024px) {
   header.mdl-layout__header {
@@ -449,6 +466,13 @@ a.latest-links:hover {
   }
   main {
     margin-top: 36px !important;
+  }
+  article.dgl-card.mdl-card .mdl-card__supporting-text {
+    padding: 16px 64px 32px;
+  }
+  #content > article > div.mdl-card__title > h2 {
+    padding-left: 64px;
+    padding-right: 64px;
   }
 }
 .content-grid {
@@ -480,10 +504,10 @@ header.mdl-layout__header a.mdl-navigation__link.site-title {
   width: auto;
   height: 100%;
   font-size: xx-large;
-  font-family: 'Inknut Antiqua', serif;
+  font-family: 'Vollkorn', serif;
   text-align: center;
   vertical-align: middle;
-  margin-top: -30px;
+  margin-top: 16px;
 }
 @media screen and (min-width: 840px) {
   header.mdl-layout__header a.mdl-navigation__link.site-title {

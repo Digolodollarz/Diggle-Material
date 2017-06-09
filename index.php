@@ -7,7 +7,7 @@
 
 get_header(); // This fxn gets the header.php file and renders it ?>
 <div id="primary"
-     class="mdl-cell mdl-cell--8-col">
+     class="mdl-cell mdl-cell--8-col mdl-cell--5-col-tablet">
     <div id="content" role="main">
         <?php if (have_posts()) :
             // Do we have any posts in the databse that match our query?
@@ -66,7 +66,7 @@ get_header(); // This fxn gets the header.php file and renders it ?>
     </div><!-- #content .site-content -->
 </div><!-- #primary .content-area -->
 <div id="sidebar"
-       class="mdl-cell mdl-cell--4-col">
+       class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
     <?php get_sidebar(); ?>
 </div>
 <?php get_footer(); // This fxn gets the footer.php file and renders it ?>

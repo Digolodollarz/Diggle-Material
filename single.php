@@ -52,11 +52,23 @@ get_header(); // This fxn gets the header.php file and renders it ?>
             </article>
 
             <div class="mdl-card mdl-shadow--2dp" style="min-height: initial;">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- Diggle Tech -  In Post -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-2093893395803299"
+                     data-ad-slot="9714862564"
+                     data-ad-format="auto"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+            <div class="mdl-card mdl-shadow--2dp" style="min-height: initial;">
                 <?php wp_link_pages(); // This will display pagination links, if applicable to the post ?>
                 <div class="fb-comments" data-href="<?php the_permalink(); ?>" data-width="100%"
                      data-numposts="5"></div>
             </div>
-
 
             <div class="related-posts ">
                 <div class="mdl-card mdl-shadow--2dp dgl-related-card mdl-grid mdl-grid--no-spacing">
@@ -77,16 +89,6 @@ get_header(); // This fxn gets the header.php file and renders it ?>
                         $my_query = new WP_Query($args);
                         if ($my_query->have_posts()) {
                             while ($my_query->have_posts()) : $my_query->the_post(); ?>
-                                <!--                            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--4-col-phone">-->
-                                <!--                                <div class="mdl-card mdl-card--2dp related-posts">-->
-                                <!--                                    <a href="--><?php //the_permalink() ?><!--" rel="bookmark"-->
-                                <!--                                       title="Permanent Link to --><?php //the_title_attribute(); ?><!--">-->
-                                <!--                                        <div class="mdl-card__title">-->
-                                <!--                                            <h4>--><?php //the_title(); ?><!--</h4>-->
-                                <!--                                        </div>-->
-                                <!--                                    </a>-->
-                                <!--                                </div>-->
-                                <!--                            </div>-->
                                 <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
                                     <a class="dgl-link--no-style" href="<?php the_permalink() ?>">
                                         <div class="dgl-related-card--image">
@@ -113,14 +115,6 @@ get_header(); // This fxn gets the header.php file and renders it ?>
         <?php endwhile; // OK, let's stop the post loop once we've displayed it
             ?>
 
-            <!--            --><?php
-//            // If comments are open or we have at least one comment, load up the default comment template provided by Wordpress
-//            if (comments_open() || '0' != get_comments_number())
-//                comments_template('', true);
-//
-            ?>
-
-
         <?php else : // Well, if there are no posts to display and loop through, let's apologize to the reader (also your 404 error) ?>
 
             <article class="post error">
@@ -130,12 +124,7 @@ get_header(); // This fxn gets the header.php file and renders it ?>
         <?php endif; // OK, I think that takes care of both scenarios (having a post or not having a post to show) ?>
 
     </div><!-- #content .site-content -->
-    <!--    -->
-    <!--    <div id="sidebar" class="mdl-cell mdl-cell--4-col-desktop mdl-cell--8-col-tablet-->
-    <!--     mdl-cell--order-2 mdl-cell--order-1-desktop">-->
-    <!---->
-    <!--    </div>-->
-    <!--    --><?php //get_sidebar(); ?>
+
 </div><!-- #primary .content-area -->
 <div id="sidebar"
      class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">

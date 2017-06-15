@@ -100,7 +100,7 @@ h4.side-title {
   padding: 0;
 }
 .mdl-card .mdl-card__title .dgl-overlay-card-title {
-  line-height: 1.5;
+  line-height: 1;
   width: 100%;
   padding: 24px 16px 8px;
   background: rgba(0, 0, 0, 0.15);
@@ -476,12 +476,15 @@ a.latest-links:hover {
   }
 }
 .content-grid {
-  max-width: 1600px;
+  max-width: 1200px;
   padding: 8px 0 0;
 }
 .mdl-layout-title a {
   font-size: larger;
   font-weight: bold;
+}
+.mdl-card__title-text {
+  font-size: 36px;
 }
 header.mdl-layout__header {
   position: fixed;

@@ -24,7 +24,7 @@
 
     <?php endif; ?>
 
-    <?php if (! is_404()): //Insert a bunch of meta tags here ?>
+    <?php if (!is_404()): //Insert a bunch of meta tags here ?>
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({
@@ -39,16 +39,16 @@
     <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
     <![endif]-->
 
-<!--    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
-<!--    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.red-indigo.min.css">-->
-
+    <!--    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
+    <!--    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.red-indigo.min.css">-->
+    <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy|Vollkorn" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <?php wp_head();
     // This fxn allows plugins, and Wordpress itself, to insert themselves/scripts/css/files
     // (right here) into the head of your website.
     // Removing this fxn call will disable all kinds of plugins and Wordpress default insertions.
     // Move it if you like, but I would keep it around.
     ?>
-
 </head>
 
 <body
@@ -92,4 +92,5 @@
             <?php wp_nav_menu(); ?>
         </nav>
     </div>
-    <main class="main-fluid content-grid mdl-grid""><!-- start the page containter -->
+    <div class="main-fluid">
+    <main class="content-grid mdl-grid"><!-- start the page containter -->

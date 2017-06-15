@@ -19,7 +19,6 @@ get_header(); // This fxn gets the header.php file and renders it ?>
             ?>
 
             <article class="dgl-card mdl-card mdl-shadow--4dp">
-                <!--                <div class="dgl-card mdl-card mdl-shadow--2dp">-->
                 <div class="mdl-card__title"
                      style="background: url('<?php the_post_thumbnail_url(); ?>') center / cover;">
                     <h2 class="mdl-card__title-text dgl-overlay-card-title">
@@ -40,7 +39,7 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 
                     <div class="dgl-fill-width"></div>
                     <?php echo the_category(' '); // Display the categories this post belongs to, as links ?>
-                    <!--                        --><?php //echo get_the_tag_list('| &nbsp;', '&nbsp;'); // Display the tags this post has, as links separated by spaces and pipes ?>
+                    <?php //echo get_the_tag_list('| &nbsp;', '&nbsp;'); // Display the tags this post has, as links separated by spaces and pipes ?>
 
                     <a class="dgl-button--read-more mdl-button mdl-js-button mdl-button--colored mdl-button--raised mdl-js-ripple-effect"
                        href="<?php the_permalink(); // Get the link to this post ?>">
@@ -52,6 +51,37 @@ get_header(); // This fxn gets the header.php file and renders it ?>
                 <!--                </div>-->
             </article>
 
+            <?php if ($wp_query->current_post == 0) { ?>
+                <div class="mdl-card mdl-shadow--2dp" style="min-height: initial;">
+                    <span>Sponsored Content</span>
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- Diggle Tech - Archives -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-2093893395803299"
+                         data-ad-slot="7958927764"
+                         data-ad-format="auto"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            <?php } ?>
+
+            <?php if ($wp_query->current_post == 3) { ?>
+                <div class="mdl-card mdl-shadow--2dp" style="min-height: initial;">
+                    <span>Sponsored Content</span>
+<!--                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+                    <!-- Diggle Tech - Archives -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-2093893395803299"
+                         data-ad-slot="7958927764"
+                         data-ad-format="auto"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            <?php } ?>
         <?php endwhile; // OK, let's stop the posts loop once we've exhausted our query/number of posts
             ?>
             <?php get_pagination_links(); ?>
@@ -66,9 +96,14 @@ get_header(); // This fxn gets the header.php file and renders it ?>
     </div><!-- #content .site-content -->
 </div><!-- #primary .content-area -->
 <div id="sidebar"
-       class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+     class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
     <?php get_sidebar(); ?>
 </div>
 <?php get_footer(); // This fxn gets the footer.php file and renders it ?>
+
+
+
+
+
 
 
